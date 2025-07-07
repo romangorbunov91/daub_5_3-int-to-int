@@ -3,12 +3,10 @@
 
 В случае вектора ${f}$ размера ${N}$ коэффициенты разложения Daub 5/3 при ${k=[1;N]}$:
 
-$$\begin{equation}
-    \begin{align}
-        d_k &= \cfrac{-1}{2} f_{2k-1} + f_{2k} + \cfrac{-1}{2} f_{2k+1}, \\
-        a_k &= \cfrac{-1}{8} f_{2k-3} + \cfrac{1}{4} f_{2k-2} + \cfrac{3}{4} f_{2k-1} + \cfrac{1}{4} f_{2k} + \cfrac{-1}{8} f_{2k+1},
-    \end{align}
-\end{equation}$$
+$$\begin{align*}
+    d_k &= \cfrac{-1}{2} f_{2k-1} + f_{2k} + \cfrac{-1}{2} f_{2k+1}, \\
+    a_k &= \cfrac{-1}{8} f_{2k-3} + \cfrac{1}{4} f_{2k-2} + \cfrac{3}{4} f_{2k-1} + \cfrac{1}{4} f_{2k} + \cfrac{-1}{8} f_{2k+1},
+\end{align*}$$
 
 где $d$ - флуктуации, $a$ - тренд.
 
