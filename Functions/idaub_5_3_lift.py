@@ -1,5 +1,5 @@
-from Functions.user_functions import indx_even, d_func
-# version x.x by romangorbunov91
+from Functions.user_functions import indx_even
+# version 1.0 by romangorbunov91
 # 08-Jul-2025
 
 def idaub_5_3_lift(coeff, int_flag):
@@ -11,11 +11,15 @@ def idaub_5_3_lift(coeff, int_flag):
     
     # Odd values.
     if int_flag:
-        for k in range(N//2):
-            f[2*k] = a[k] - (d_func(k-1, f, N, int_flag=False) + d[k]) //4
+        # k == 0.
+        f[0] = a[0] - d[0] //2
+        for k in range(1,N//2):
+            f[2*k] = a[k] - (d[k-1] + d[k]) //4
     else:
-        for k in range(N//2):
-            f[2*k] = a[k] - (d_func(k-1, f, N, int_flag=False) + d[k]) /4    
+        # k == 0.
+        f[0] = a[0] - d[0] /2
+        for k in range(1,N//2):
+            f[2*k] = a[k] - (d[k-1] + d[k]) /4
     
     # Even values.
     if int_flag:
