@@ -83,7 +83,7 @@ $$\begin{align}
 
 <img src='readme_img/d_symmetry.png' style='width:100%; height:auto;'>
 
-**Вывод:** ${d_{k-1} = d_k}$.
+**Вывод:** ${d_{-1} = d_0}$.
 
 Следовательно, коэффициенты ${a_k}$ вычисляются по формулам:
 
