@@ -106,7 +106,49 @@ $$f_{2k}=a_{k}-
 \end{cases}$$
 
 ## Daub 5/3 integer-to-integer system
+В книге [1] предложены следующие формулы:
 
+$$\begin{align}
+    d_k &= f_{2k} - \left \lfloor \cfrac{1}{2} \left( f_{2k-1} + f_{2k+1} \right) + \cfrac{1}{2} \right \rfloor, \\
+    a_k &= f_{2k-1} + \left \lfloor \cfrac{1}{4} \left( d_{k-1} + d_{k} \right) + \cfrac{1}{2} \right \rfloor,
+\end{align}$$
+
+$$\begin{align}
+    f_{2k-1} &= a_{k} - \left \lfloor \cfrac{1}{4} \left( d_{k-1} + d_{k} \right) + \cfrac{1}{2} \right \rfloor, \\
+    f_{2k} &= d_{k} + \left \lfloor \cfrac{1}{2} \left( f_{2k-1} + f_{2k+1} \right) + \cfrac{1}{2} \right \rfloor.
+\end{align}$$
+
+где ${\lfloor x + 1/2 \rfloor}$ - операция округления до ближайшего целого числа.
+
+Такая форма записи предполагает промежуточные float-операции, несмотря на целочисленность $f$, $a$, $d$.
+
+В качестве альтернативы предполагается использовать следующую форму записи:
+
+$$\begin{align}
+    d_k &= f_{2k} - \left( f_{2k-1} + f_{2k+1} + 1 \right) // 2, \\
+    a_k &= f_{2k-1} + \left( d_{k-1} + d_{k} + 2 \right) // 4,
+\end{align}$$
+
+$$\begin{align}
+    f_{2k-1} &= a_{k} - \left( d_{k-1} + d_{k} + 2 \right) // 4, \\
+    f_{2k} &= d_{k} + \left( f_{2k-1} + f_{2k+1} + 1 \right) // 2.
+\end{align}$$
+
+где ${//}$ - операция целочисленного деления (остаток от деления отбрасывается).
+
+Предложенная форма записи предполагает применение исключительно целочисленной арифметики.
+
+В случае индексации от ${k=0}$ выражения принимают вид:
+
+$$\begin{align}
+    d_k &= f_{2k+1} - \left( f_{2k} + f_{2k+2} + 1 \right) // 2, \\
+    a_k &= f_{2k} + \left( d_{k-1} + d_{k} + 2 \right) // 4,
+\end{align}$$
+
+$$\begin{align}
+    f_{2k} &= a_{k} - \left( d_{k-1} + d_{k} + 2 \right) // 4, \\
+    f_{2k+1} &= d_{k} + \left( f_{2k} + f_{2k+2} + 1 \right) // 2.
+\end{align}$$
 
 ## Reference
 1. James S. Walker. A Primer on Wavelets and Their Scientific Applications. 2nd Edition. 2008.
