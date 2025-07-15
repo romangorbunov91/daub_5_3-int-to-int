@@ -1,3 +1,6 @@
+# version 1.0 by romangorbunov91
+# 15-Jul-2025
+
 import numpy as np
 def daub_5_3(N):
     if ((N > 1)&((N % 2) == 0)):

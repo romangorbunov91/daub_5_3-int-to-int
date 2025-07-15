@@ -1,8 +1,8 @@
+# version 0.3 by romangorbunov91
+# 15-Jul-2025
+
 import numpy as np
 from Functions.daub_5_3_lift import daub_5_3_lift
-# version 0.2 by romangorbunov91
-# 13-Jul-2025
-
 # Преобразование выполняется в следующей последовательности:
 # 1. Преобразование строк.
 # 2. Изменение порядка строк (bottom-up).

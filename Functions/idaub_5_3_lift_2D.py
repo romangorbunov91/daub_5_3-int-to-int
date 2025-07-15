@@ -1,7 +1,8 @@
+# version 0.2 by romangorbunov91
+# 15-Jul-2025
+
 import numpy as np
 from Functions.idaub_5_3_lift import idaub_5_3_lift
-# version 0.1 by romangorbunov91
-# 13-Jul-2025
 
 # Преобразование выполняется в следующей последовательности:
 # 1. Изменение порядка строк (bottom-up).

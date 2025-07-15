@@ -1,6 +1,7 @@
+# version 1.2 by romangorbunov91
+# 15-Jul-2025
+
 from Functions.user_functions import indx_even
-# version 1.1 by romangorbunov91
-# 10-Jul-2025
 
 def daub_5_3_lift(f, int_flag):
     N = len(f)
