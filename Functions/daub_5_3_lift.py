@@ -1,6 +1,7 @@
-# version 1.2 by romangorbunov91
-# 15-Jul-2025
+# version 1.3 by romangorbunov91
+# 19-Jul-2025
 
+import numpy as np
 from Functions.user_functions import indx_even
 
 def daub_5_3_lift(f, int_flag):
@@ -8,6 +9,10 @@ def daub_5_3_lift(f, int_flag):
     d = [0] * (N//2)
     a = [0] * (N//2)
     
+    if np.issubdtype(f.dtype, np.integer):
+        if not int_flag:
+            f = f.astype(float)
+        
     for k in range(N//2):
         if int_flag:
             d[k] = f[indx_even(2*k+1,N)] - (f[indx_even(2*k,N)] + f[indx_even(2*k+2,N)] + 1) //2
